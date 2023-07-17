@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="box">
+       
+    <div id="weathercon"><i class="bi bi-sun-fill"></i></div>
+    <i class="bi bi-cloud-fill"></i>
+    <div class="info"><i class="bi bi-house-fill"></i>
+        <h3 class="location">Sheohar,bihar</h3>
+    <p id="date">2023/07/18</p>
+    <h1 class="temp">30.0 <sup>o</sup>C</h1>
+    <h4 class="tempmin_max">"temp_min": 306.82  </h4>
+    <h4 class="tempmin_max">  "temp_max": 306.82</h4>
+    <div class="wave -one"></div>
+    <div class="wave -two"></div>
+    <div class="wave -three"></div>
+    </div>
+</div>
+<script>
+   const curdate = document.getElementById("date");
+   const weathercon = document.getElementById("weathercon");
+
+   const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+   const d = new Date();
+   let day = weekday[d.getDay()];
+    let month = d.getMonth();
+    let date = d.getDate();
+    let year = d.getFullYear();
+    let hour = d.getHours();
+    let minute = d.getMinutes();
+
+    curdate.innerHTML= day + " | " + date + "/" + month + "/" + year + " | " + hour + ":" + minute;
+
+  
+</script>
+</body>
+</html>

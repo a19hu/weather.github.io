@@ -1,0 +1,94 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(85, 63, 97);
+    color: aliceblue;
+}
+.box{
+    background-color: rgb(103, 111, 148);
+    border: 1px solid transparent;
+    box-shadow: 5px 5px 10px black;
+    height: 20rem;
+    width: 10rem;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+.bi-sun-fill{
+    font-size: 50px;
+    color: rgb(209, 199, 17);
+    
+}
+#weathercon{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.bi-house-fill{
+    font-size: 50px;
+    color: rgb(17, 209, 52);
+}
+.info{
+    margin-top: 50px;
+    position: absolute;
+    margin-bottom: 0;
+}
+.bi-cloud-fill{
+    font-size: 40px;
+    color: rgb(134, 180, 178);
+    position: relative;
+    animation: moves 5s infinite;
+}
+@keyframes moves {
+    from{
+        left: 0px;
+    }
+    to{
+        left: 150px;
+    }
+}
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    background-color: aliceblue;
+    width: 23rem;
+    height: 23rem;
+    margin-left: -11rem;
+    margin-top: -11rem ;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+
+
+
+}
+.-three{
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+.-two{
+    animation: drift 7000ms infinite linear;
+    z-index: 3 !important;
+    opacity: 0.1;
+}
+
+@keyframes drift {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
